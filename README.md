@@ -216,4 +216,4 @@ Have a question or an issue about `fibi2t`? Create an [issue](https://github.com
 
 ## License
 
-[MIT licensed.](LICENSE)
+[MIT licensed.](LICENSE.md)
