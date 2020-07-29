@@ -51,6 +51,13 @@ public struct FitBitConfig {
 
     assert(redirectScheme.hasSuffix("://"), "invalid redirect scheme")
 
+    let infoPlist = try? PListFile<InfoPlist>()
+    let urlTypes = infoPlist?.data.urlTypes?.compactMap({ $0.urlSchemes }).flatMap({ $0})
+
+    let schemeWithoutSlashes = redirectScheme.replacingOccurrences(of: "://", with: "")
+    assert(urlTypes?.contains(schemeWithoutSlashes) == true,
+           "invalid urlType's scheme configuration")
+
     let config = FitBitConfig(authType: FitBitAuthType.code,
                               clientId: clientId,
                               clientSecret: clientSecret,

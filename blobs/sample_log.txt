@@ -1,0 +1,73 @@
+fibi: 2020-07-29 16:55:40 : ["startAuth https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=22BVTC&redirect_url=fibiApp://fitbit/auth&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=3600.0&prompt=Message%20to%20show"]
+fibi: 2020-07-29 16:55:57 : ["token 227eef71e45ea3f08a643029bd7f5d715542e701"]
+fibi: 2020-07-29 16:55:57 : ["start exchangeCodeForToken https://api.fitbit.com/oauth2/token?code=227eef71e45ea3f08a643029bd7f5d715542e701&grant_type=authorization_code&client_id=22BVTC&redirect_uri=fibiApp://fitbit/auth&expires_in=3600"]
+fibi: 2020-07-29 16:55:57 : ["headers [\"Authorization\": \"Basic MjJCVlRDOmVkZmFmMTg1MGM2NmIzNzQ3MTI5NjI0YjRiOTlkYzc1\", \"Content-Type\": \"application/x-www-form-urlencoded\"]"]
+fibi: 2020-07-29 16:55:58 : ["response {\"access_token\":\"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkJWVEMiLCJzdWIiOiI4TUhIWTciLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd3dlaSB3c29jIHdzZXQgd2FjdCB3bG9jIiwiZXhwIjoxNTk2MDM0NTU5LCJpYXQiOjE1OTYwMzA5NTl9.xxmN0LjkGZS9Rt5ivCDsRJgoBtdpYmt4c0Jt85oy2tg\",\"expires_in\":3600,\"refresh_token\":\"0e351642ecf3cf8a248aca486b2c67292862c98d0b5cfb5440c7713cae07258d\",\"scope\":\"settings weight heartrate sleep profile activity location nutrition social\",\"token_type\":\"Bearer\",\"user_id\":\"8MHHY7\"}"]
+success in get token
+   FitBitTokenPair
+    > accessToken: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkJWVEMiLCJzdWIiOiI4TUhIWTciLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJ3aHIgd3BybyB3bnV0IHdzbGUgd3dlaSB3c29jIHdzZXQgd2FjdCB3bG9jIiwiZXhwIjoxNTk2MDM0NTU5LCJpYXQiOjE1OTYwMzA5NTl9.xxmN0LjkGZS9Rt5ivCDsRJgoBtdpYmt4c0Jt85oy2tg
+    > refreshToken: 0e351642ecf3cf8a248aca486b2c67292862c98d0b5cfb5440c7713cae07258d
+    > scope: ["settings", "weight", "heartrate", "sleep", "profile", "activity", "location", "nutrition", "social"]
+    > userId: 8MHHY7
+    > tokenType: Bearer
+    > expiresIn: 3600.0
+---->
+Full url:    https://api.fitbit.com/1/user/-/profile.json)
+EndPoint:    GET 1/user/-/profile.json
+URL Params:  nil
+Body Params: nil
+Headers:     nil
+<----
+["user": {
+    age = 31;
+    ambassador = 0;
+    avatar = "https://static0.fitbit.com/images/profile/defaultProfile_100.png";
+    avatar150 = "https://static0.fitbit.com/images/profile/defaultProfile_150.png";
+    avatar640 = "https://static0.fitbit.com/images/profile/defaultProfile_640.png";
+    averageDailySteps = 5602;
+    challengesBeta = 1;
+    clockTimeDisplayFormat = 12hour;
+    corporate = 0;
+    corporateAdmin = 0;
+    dateOfBirth = "1988-08-30";
+    displayName = "Kyryl H.";
+    displayNameSetting = name;
+    distanceUnit = METRIC;
+    encodedId = 8MHHY7;
+    features =     {
+        exerciseGoal = 1;
+    };
+    firstName = Kyryl;
+    foodsLocale = "en_US";
+    fullName = "Kyryl Horbushko";
+    gender = MALE;
+    glucoseUnit = "en_US";
+    height = 172;
+    heightUnit = METRIC;
+    isBugReportEnabled = 0;
+    isChild = 0;
+    isCoach = 0;
+    languageLocale = "en_US";
+    lastName = Horbushko;
+    legalTermsAcceptRequired = 0;
+    locale = "en_US";
+    memberSince = "2020-07-01";
+    mfaEnabled = 0;
+    offsetFromUTCMillis = 10800000;
+    sdkDeveloper = 0;
+    sleepTracking = Normal;
+    startDayOfWeek = SUNDAY;
+    strideLengthRunning = "106.5";
+    strideLengthRunningType = default;
+    strideLengthWalking = "71.40000000000001";
+    strideLengthWalkingType = default;
+    swimUnit = METRIC;
+    timezone = "Europe/Kiev";
+    topBadges =     (
+    );
+    waterUnit = "en_US";
+    waterUnitName = "fl oz";
+    weight = 82;
+    weightUnit = METRIC;
+}]
+fibi2t.FitBitProfile
